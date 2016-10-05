@@ -16,43 +16,49 @@
       {
          "description": "The public url for the Openshift OAuth Provider",
          "name": "COCKPIT_KUBE_URL",
-         "required": true
+         "required": false
       },
       {
          "description": "The public url for the Openshift OAuth Provider",
          "name": "COCKPIT_KUBE_INSECURE",
-         "required": false
+         "required": true
       },
       {
          "description": "Oauth client secret",
          "name": "OPENSHIFT_OAUTH_CLIENT_SECRET",
          "from": "user[a-zA-Z0-9]{64}",
-         "generate": "expression"
+         "generate": "expression",
+         "required": false
       },
       {
          "description": "Oauth client id",
          "name": "OPENSHIFT_OAUTH_CLIENT_ID",
-         "value": "cockpit-oauth-client"
+         "value": "cockpit-oauth-client",
+         "required": true
       },
       {
          "description": "Skip kubernetes CA verification",
          "name": "KUBERNETES_INSECURE",
-         "value": ""
+         "value": "",
+         "required": false
       },
       {
          "description": "PEM Encoded certificate to use for CA verification",
          "name": "KUBERNETES_CA_DATA",
-         "value": ""
+         "value": "",
+         "required": false
       },
       {
          "description": "Host name that the registry is accessible at",
          "name": "REGISTRY_HOST",
-         "value": ""
+         "value": "",
+         "required": false
       },
       {
          "description": "Show only the registry interface",
          "name": "REGISTRY_ONLY",
-         "value": "false"
+         "value": "false",
+         "required": true
       }
    ],
    "objects": [
