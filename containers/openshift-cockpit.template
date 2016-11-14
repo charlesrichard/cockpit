@@ -21,7 +21,7 @@
       {
          "description": "The public url for the Openshift OAuth Provider",
          "name": "COCKPIT_KUBE_INSECURE",
-         "value": true,
+         "value": "true",
          "required": true
       },
       {
